@@ -319,15 +319,15 @@ const InputGrid = () => {
         ref={grid => gridInstance = grid}
       >
         <ColumnsDirective>
-          <ColumnDirective field='id' headerText='Id' width='100' textAlign='right' isPrimaryKey={true} visible={false} />
-          <ColumnDirective field='ma_vt' headerText='Mã hàng' width='100' validationRules={MAKHRule} textAlign='right' editTemplate={editColumnMaVT}></ColumnDirective>
+          <ColumnDirective field='id' headerText='Id' width='100' isPrimaryKey={true} visible={false} />
+          <ColumnDirective field='ma_vt' headerText='Mã hàng' width='100' validationRules={MAKHRule} editTemplate={editColumnMaVT}></ColumnDirective>
           <ColumnDirective field='ten_vt' headerText='Tên hàng' width='100'></ColumnDirective>
-          <ColumnDirective field='ma_kho' headerText='Mã kho' width='100' textAlign='right' editTemplate={editColumnMaKho}></ColumnDirective>
+          <ColumnDirective field='ma_kho' headerText='Mã kho' width='100' editTemplate={editColumnMaKho}></ColumnDirective>
           <ColumnDirective field='dvt' headerText='Đơn vị tính' width='100'></ColumnDirective>
           <ColumnDirective field='so_luong' headerText='Số lượng' width='100' editTemplate={EditColumnQuantity}></ColumnDirective>
           <ColumnDirective field='gia' headerText='Giá' width='100' editTemplate={EditColumnPrice}></ColumnDirective>
           <ColumnDirective field='thanh_tien' headerText='Thành tiền' width='100' editTemplate={EditColumnTotal}></ColumnDirective>
-          <ColumnDirective field='nhom_nganh' headerText='Nhóm ngành' width='100'></ColumnDirective>
+          {/* <ColumnDirective field='nhom_nganh' headerText='Nhóm ngành' width='100'></ColumnDirective> */}
           <ColumnDirective headerText='' width='35' commands={commands} freeze='Right' />
         </ColumnsDirective>
         <Inject services={[Edit, CommandColumn, Toolbar]} />

@@ -118,6 +118,9 @@ const dataCustomer = [
     },
 ]
 
+// npm run deploy
+// "homepage": " https://dangtuananh123456.github.io/syncfusion_research",
+
 const dataMethodPayment = [
     {
         "tk": "01",
