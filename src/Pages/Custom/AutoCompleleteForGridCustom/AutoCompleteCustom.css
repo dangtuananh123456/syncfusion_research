@@ -1,0 +1,78 @@
+
+/* Đảm bảo rằng không có thanh cuộn ở phần tử chứa bên ngoài */
+.e-popup {
+    /* width: max-content; */
+    width: 500px !important;  /* Đặt chiều rộng cụ thể cho popup */
+    max-width: 100%;
+    /* max-height: 300px; */
+    /* overflow: hidden; Loại bỏ thanh cuộn bên ngoài */
+}
+
+/* Thiết lập overflow và scroll bên trong popup */
+.e-content {
+    max-height: 300px; /* Giới hạn chiều cao cho nội dung bên trong */
+    overflow-y: auto;  /* Chỉ cuộn theo chiều dọc */
+}
+
+/* Điều chỉnh cột để hiển thị text tốt hơn */
+
+/* Flexbox layout for header and item */
+.header-container, .item-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 0;
+}
+
+/* Adjust the width distribution for each column */
+.header-item, .item {
+    flex: 1; /* Set equal width for now, adjust if needed */
+    padding: 8px;
+    text-align: left;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+    white-space: nowrap; /* Use nowrap to prevent text wrapping */
+}
+
+.header-item {
+    font-weight: bold;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Make individual columns wider based on content needs */
+.header-container .header-item:first-child, .item-container .item:first-child {
+    flex: 4; /* Adjust width of first column for 'Mã KH' */
+}
+
+.header-container .header-item:nth-child(2), .item-container .item:nth-child(2) {
+    flex: 5; /* Adjust width of 'Tên KH' */
+}
+
+.header-container .header-item:nth-child(3), .item-container .item:nth-child(3) {
+    flex: 3; /* Adjust width of 'Địa chỉ' */
+}
+
+.header-container .header-item:nth-child(4), .item-container .item:nth-child(4) {
+    flex: 1.5; /* Adjust width of 'Email' */
+}
+
+/* Handle overflow with ellipsis */
+.item {
+    white-space: nowrap;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+}
+
+/* Hover effect for better user experience */
+.item-container:hover {
+    background-color: #f9f9f9;
+}
+
+/* Custom popup container to enable scrolling */
+.e-popup {
+    overflow-y: auto; /* Enables vertical scrolling */
+    max-height: 250px; /* Sets the maximum height for the popup */
+    box-sizing: border-box;
+}
+

@@ -1,0 +1,1 @@
+export const key1 = 'text1';

@@ -1,0 +1,34 @@
+
+.Ph_Wrapper {
+    padding: 15px;
+}
+
+.titleTabList{
+    display: flex;
+    padding-top : 3px;
+    font-weight: bold;
+    padding-bottom: 8px;
+    border-bottom: solid 1px rgb(203, 195, 212);
+    border-top: solid 1px rgb(203, 195, 212);
+    margin-bottom: 10px;
+}
+
+.detailTab{
+    padding-right: 15px;
+}
+.detailTab:hover{
+    cursor: pointer;
+}
+.billTab:hover{
+    cursor : pointer;
+}
+
+.e-gridheader{
+    z-index: 1;
+    position: sticky;
+    top : 0px;
+}
+
+tr{
+    z-index: 2;
+}
